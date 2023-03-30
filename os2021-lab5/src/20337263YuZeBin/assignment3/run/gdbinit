@@ -1,0 +1,14 @@
+target remote:1234
+file ../build/kernel.o
+set disassembly-flavor intel
+add-symbol-file entry.obj
+
+b schedule
+b asm_switch_thread
+b switch_end
+b first_thread
+b second_thread
+b third_thread
+b c_time_interrupt_handler
+b program_exit
+

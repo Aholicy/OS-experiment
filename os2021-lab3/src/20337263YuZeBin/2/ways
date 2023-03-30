@@ -1,0 +1,6 @@
+b *0x7e00
+layout asm
+b bootloader.asm:41
+b bootloader.asm:45
+b bootloader.asm:49
+qemu-system-i386 -hda hd.img -serial null -monitor stdio 
